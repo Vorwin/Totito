@@ -96,6 +96,9 @@ function confirmarGanador() {
         document.getElementById("RondaJ1").innerHTML = contador1;
         bandera = false; 
         empate = false;
+        for (var index = 0; index < 9; index++) {
+            tab[index].value = " ";
+        }
 
     }
     if(
@@ -115,7 +118,10 @@ function confirmarGanador() {
         contador2 += 1;
         document.getElementById("RondaJ2").innerHTML = contador2;
         bandera = false; 
-        empate = false
+        empate = false;
+        for (var index = 0; index < 9; index++) {
+            tab[index].value = " ";
+        }
     }
 
     if (empate && !tab.some(boton => boton.value == " ")) {
